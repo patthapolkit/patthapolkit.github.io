@@ -7,7 +7,7 @@ import Button from "../components/Button.astro";
   <main>
     <section>
       <img
-        src="/patthapol.jpg"
+        src="/patthapol.webp"
         alt="Patthapol Kittikun"
         width="200"
         height="200"
@@ -49,30 +49,38 @@ import Button from "../components/Button.astro";
     max-width: 800px;
     gap: 1.25rem;
   }
+  @media screen and (min-width: 768px) {
+    main section img {
+      margin: 0 0 -2.5rem auto;
+    }
+    p {
+      font-size: 1.25rem;
+    }
+    p span {
+      font-size: 1.5rem;
+    }
+  }
   main section div {
     display: flex;
+    place-content: center;
     gap: 1rem;
     margin-top: 1rem;
   }
   img {
     border-radius: 50%;
-    margin-left: auto;
-    margin-bottom: -2.5rem;
+    margin: 0 auto;
   }
   h1 {
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 3vw + 1rem, 2.5rem);
     margin: 0 0 0.5rem;
   }
   p {
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 300;
     margin: 0;
   }
   p span {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 500;
-  }
-  i {
-    margin-right: 0.5rem;
   }
 </style>
